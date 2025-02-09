@@ -3,6 +3,7 @@ name: Ping to API - Render Deployment
 on:
   schedule:
     - cron: '*/1 * * * *' # Runs every minute
+  workflow_dispatch: 
 
 jobs:
   ping_api:
