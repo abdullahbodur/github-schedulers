@@ -1,0 +1,13 @@
+name: Ping to API - Render Deployment 
+
+on:
+  schedule:
+    - cron: '*/1 * * * *' # Runs every minute
+
+jobs:
+  ping_api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send ping request
+        run: curl -X GET https://sds-webhook-v28u.onrender.com/ping
